@@ -47,6 +47,11 @@ const listMenu = [
       icon: "question",
       navigate: "Contact",
     },
+    {
+      title: "Config",
+      icon: "gear",
+      navigate: "Config",
+    },
   ];
 
 export default Home = (props) => {

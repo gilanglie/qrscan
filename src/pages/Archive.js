@@ -33,7 +33,7 @@ export default Archive = (props,{navigation}) =>{
 
     useEffect(()=>{
         // console.log(props.auth.baseURL)
-        const api = new Strapi();
+        const api = new Strapi(props.host, false);
         api.listArchive(selArc).then(res => {
             setData(res)
         })
@@ -44,7 +44,7 @@ export default Archive = (props,{navigation}) =>{
     },[selArc])
     const handleActive = (id,status,name) => {
         var data = status == 'Active' ? 'Inactive' : 'Active';
-        const api = new Strapi();
+        const api = new Strapi(props.host, false);
         api.setArchive(id,data).then(res => {
             ToastAndroid.show('Status ' +name +'telah ' + data == 'Active' ?  'di Unwrap' : 'di Wrap' , ToastAndroid.LONG);
             api.listArchive(selArc).then(res => {
@@ -56,7 +56,7 @@ export default Archive = (props,{navigation}) =>{
         })
     }
     const handleDeleteArchive = (id) => {
-        const api = new Strapi();
+        const api = new Strapi(props.host, false);
         api.countPassportinArchive(id).then(res=>{
             if(res.length == 0){
                 var i = 0;
@@ -93,7 +93,7 @@ export default Archive = (props,{navigation}) =>{
     const exportExcel = async (id,name) => {
         try{
 
-        const api = new Strapi(); 
+        const api = new Strapi(props.host, false); 
         let isPermitedExternalStorage = await PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE);
         if(!isPermitedExternalStorage){
             // Ask for permission
@@ -116,7 +116,7 @@ export default Archive = (props,{navigation}) =>{
                     res.forEach(d => {
                     let val = {
                         code : d.code,
-                        archive : d.archive.name,
+                        archive : d.archiveName,
                         name: d.name, 
                         gender : d.gender, 
                         dateBirth : d.dateBirth, 

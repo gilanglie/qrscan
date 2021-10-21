@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react';
+import React,{useState, Fragment} from 'react';
 import {
     SafeAreaView,
     ScrollView,
@@ -61,16 +61,56 @@ export default Login = ({ navigation }) => {
       }
       
     return(
-        <RNCamera
-            ref={ref => {
-            camera = ref;
-            }}
-            style={{ 
-            flex: 1,
-            width: '100%',
-            }}
-            onGoogleVisionBarcodesDetected={e=> {readBarcode ? barcodeRecognized(e) : null}}
-            >
-        </RNCamera>
+        
+        <Fragment>
+            <RNCamera
+                ref={ref => {
+                camera = ref;
+                }}
+                style={{ 
+                flex: 1,
+                width: '100%',
+                }}
+                onGoogleVisionBarcodesDetected={e=> {readBarcode ? barcodeRecognized(e) : null}}
+                >
+            </RNCamera>
+            <View style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                zIndex: 1,
+            }}>
+            <View style={{
+                    flex: 1,
+                    backgroundColor: "rgba(0,0,0,0.7)",
+            }}></View>
+            <View style={{
+                    flexDirection: "row",
+                    flex: 1.5,
+            }}>
+                <View style={{
+                    flex: 1,
+                    backgroundColor: "rgba(0,0,0,0.7)",
+                }}></View>
+                <View style={{
+                    borderColor: "red",
+                    borderWidth: 2,
+                    flex: 6,
+                }}>
+                    <Text style={{backgroundColor:'white',padding: 12,color:'black'}}>Login QR from browser </Text>
+                </View> 
+                <View style={{
+                    flex: 1,
+                    backgroundColor: "rgba(0,0,0,0.7)",
+                }}></View>
+            </View>
+            <View style={{
+                    flex: 1,
+                    backgroundColor: "rgba(0,0,0,0.7)",
+            }}></View>
+            </View>
+    </Fragment>
     )
 }

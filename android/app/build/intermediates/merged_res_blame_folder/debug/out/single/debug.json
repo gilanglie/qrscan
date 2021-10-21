@@ -1,39 +1,27 @@
 [
     {
-        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
         "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_adaptive_fore.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_adaptive_fore.png"
     },
     {
         "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnativeratings_dist_images_star.png.flat",
         "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnativeratings_dist_images_star.png"
     },
     {
-        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_adaptive_back.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_adaptive_back.png"
     },
     {
-        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
-        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-hdpi\\node_modules_reactnavigation_elements_src_assets_backicon.png"
-    },
-    {
-        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_src_assets_companylogo.jpeg.flat",
-        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-mdpi\\src_assets_companylogo.jpeg"
-    },
-    {
-        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_adaptive_fore.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_adaptive_fore.png"
     },
     {
         "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnativeratings_dist_images_bell.png.flat",
-        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnativeratings_dist_images_bell.png"
     },
     {
         "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
@@ -42,6 +30,10 @@
     {
         "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnativeratings_dist_images_heart.png.flat",
         "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnativeratings_dist_images_heart.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
@@ -56,36 +48,88 @@
         "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnativeratings_dist_images_rocket.png"
     },
     {
-        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_adaptive_fore.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_adaptive_fore.png"
     },
     {
-        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
-        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-xhdpi\\node_modules_reactnavigation_elements_src_assets_backicon.png"
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
         "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnativeratings_dist_images_airbnbstar.png.flat",
-        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnativeratings_dist_images_airbnbstar.png"
-    },
-    {
-        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnavigation_elements_src_assets_backiconmask.png.flat",
-        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnavigation_elements_src_assets_backiconmask.png"
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_adaptive_back.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_adaptive_back.png"
     },
     {
         "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_adaptive_back.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_adaptive_back.png"
+    },
+    {
         "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_adaptive_fore.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_adaptive_fore.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-hdpi\\node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_src_assets_companylogo.jpeg.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-mdpi\\src_assets_companylogo.jpeg"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_adaptive_back.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_adaptive_back.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_adaptive_fore.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_adaptive_fore.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_adaptive_back.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_adaptive_back.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnativeratings_dist_images_bell.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnativeratings_dist_images_bell.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-xhdpi\\node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnavigation_elements_src_assets_backiconmask.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnavigation_elements_src_assets_backiconmask.png"
+    },
+    {
+        "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnativeratings_dist_images_airbnbstar.png.flat",
+        "source": "D:\\work\\qrcode\\qrscan\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnativeratings_dist_images_airbnbstar.png"
     },
     {
         "merged": "D:\\work\\qrcode\\qrscan\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",

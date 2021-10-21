@@ -22,6 +22,7 @@
     "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera.git",
     "react-native-elements": "^3.4.2",
     "react-native-fs": "^2.18.0",
+    "react-native-loading-spinner-overlay": "^2.0.0",
     "react-native-restart": "0.0.22",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.8.0",

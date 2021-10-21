@@ -16,6 +16,7 @@ Strapi.prototype.apiSearch = function (data,type) {
         // headers: this.headers,
         // data : data
     };
+    console.log(config)
     return axios(config)
     .then(function (response) {
         return response.data
@@ -26,10 +27,10 @@ Strapi.prototype.apiSearch = function (data,type) {
     });
 }
 
-Strapi.prototype.findPassportbyCode = function (req, type) {
+Strapi.prototype.findPassportbyCode = function (req) {
     var config = {
         method: 'get',
-        url: this.host + 'paspors?code=' + req,
+        url: this.host + '/paspors/' + req,
         headers: { 
             'Content-Type': 'application/json'
           }
@@ -48,10 +49,11 @@ Strapi.prototype.listArchive = function (type) {
     var data = {}
     const config = {
         method: 'get',
-        url: this.host + 'archives?_sort=id:DESC&type='+ type,
+        url: this.host + '/archives?_sort=id:DESC&type='+ type,
         // headers: this.headers,
         data : data
     };
+    console.log(config)
     return axios(config)
     .then(function (response) {
         return response.data
@@ -65,7 +67,7 @@ Strapi.prototype.listArchive = function (type) {
 Strapi.prototype.createArchive = function (data) {
     const config = {
         method: 'post',
-        url: this.host + 'archives',
+        url: this.host + '/archives',
         // headers: this.headers,
         data : data
     };
@@ -81,11 +83,12 @@ Strapi.prototype.createArchive = function (data) {
 
 Strapi.prototype.setArchive = function (id, status) {
     var data = {
-        status : status
+        status : status,
+        type: type
     }
     const config = {
-        method: 'put',
-        url: this.host + 'archives/' + id,
+        method: 'post',
+        url: this.host + '/archives/' + id + '/' + status,
         // headers: this.headers,
         data : data
     };
@@ -101,7 +104,7 @@ Strapi.prototype.setArchive = function (id, status) {
 Strapi.prototype.deleteArchive = function (id) {
     const config = {
         method: 'delete',
-        url: this.host + 'archives/' + id,
+        url: this.host + '/archives/' + id,
         // headers: this.headers, 
         // data : data
     };
@@ -121,7 +124,7 @@ Strapi.prototype.createPassport = function (data) {
     var data = data
     const config = {
         method: 'post',
-        url: this.host + 'paspors',
+        url: this.host + '/paspors',
         headers: this.headers,
         data : data
     };
@@ -135,13 +138,14 @@ Strapi.prototype.createPassport = function (data) {
     });
 }
 Strapi.prototype.findPassport = function (val) {
-    var data = {}
+    // var data = {}
     const config = {
         method: 'get',
-        url: this.host + 'paspors?_q=' + val,
+        url: this.host + '/paspors?_q=' + val,
         // headers: this.headers,
-        data : data
+        // data : data
     };
+    console.log(config)
     return axios(config)
     .then(function (response) {
         return response.data
@@ -155,7 +159,7 @@ Strapi.prototype.countPassportinArchive = function (data) {
     // var data = {}
     const config = {
         method: 'get',
-        url: this.host + 'paspors?archive=' + data,
+        url: this.host + '/paspors?archive=' + data,
         // headers: this.headers,
         data : data
     };
@@ -174,7 +178,7 @@ Strapi.prototype.deletePassport = function (id) {
     var data = {}
     const config = {
         method: 'delete',
-        url: this.host + 'paspors/' + id,
+        url: this.host + '/paspors/' + id,
         // headers: this.headers,
         // data : data
     };

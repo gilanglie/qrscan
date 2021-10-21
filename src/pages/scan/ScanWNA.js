@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, Fragment} from 'react';
 import {
     Text,
     View,
@@ -13,10 +13,17 @@ import { RNCamera } from 'react-native-camera';
 import WNA from '../../api/WNA';
 import Strapi from '../../api/Strapi';
 import { Card } from 'react-native-elements/dist/card/Card';
+import ModalData from '../../components/ModalData';
+import Spinner from 'react-native-loading-spinner-overlay';
+import RNRestart from 'react-native-restart'; // Import package from node modules
 
 export default ScanWNA = (props,{ navigation }) => {
     const [readBarcode, setReadBarcode] = useState(true);
     const [code, setCode] = useState('');    
+    const [visible, setVisible] = useState(false);
+    const [data, setData] = useState(false);
+    const [loading, setLoading] = useState(false)
+
     const barcodeRecognized = ({barcodes}) => {
         if(barcodes.length > 0){
             // console.log(barcodes[0].data)
@@ -26,147 +33,104 @@ export default ScanWNA = (props,{ navigation }) => {
     };
     
     const findData = (val,type) => {
-        const api = new Strapi(false,props.auth.baseURL);
+        setLoading(true)
+        const api = new Strapi(props.auth.baseURL, props.auth.baseURL);
         api.apiSearch(val,type).then(result => {
             console.log('result',result)
+            
             if(Object.keys(result).length > 0){
                 console.log('res',result)
-                api.findPassportbyCode(val,'ijin_tinggal').then(res => {
-                    console.log('find passport', res)
-                    if(res.length == 0){
-                        // save to box archive
-                        let data = {
-                            "code": result.no_permohonan.toString(),
-                            "name": result.nama_pemohon,
-                            "dateBirth": result.tgl_lahir,
-                            "datePrint": result.tanggal_permohonan,
-                            "noKTP": result.no_paspor,
-                            "noPassport": result.no_paspor,
-                            "gender": result.jenis_kelamin,
-                            "type": 'ijin_tinggal',
-                            "status": result.sub_tahapan,
-                        }
-                        console.log('data',data)
-                        api.listArchive('wna')
-                        .then(res=>{
-                            // console.warn('list archive', res)
-                            if(res.length == 0){
-                                let arcData = {
-                                    name : 'Box 1',
-                                    status : 'Active',
-                                    type : 'wna'
-                                }
-                                api.createArchive(arcData)
-                                .then(res => {
-                                    // console.log('create arc', res)
-                                    data["archive"] = res.id
-                                    // console.log('data',data)
-                                    api.createPassport(data).then(res => {
-                                        console.log('create pass', res)
-                                        ToastAndroid.show('Barcode '+ val +' ditambahkan ke ' + res.archive.name , ToastAndroid.LONG);
-                                        setCode('')
-                                    })
-                                })    
-                            }else{
-                                
-                                data["archive"] = res[0].id
-                                var limit = res[0].limit;
-                                api.countPassportinArchive(res[0].id).then(res => {
-                                    console.log('count',res)
-                                    var count = res
-                                    if(count.length >= limit){
-                                        Alert.alert(
-                                            "Warning",
-                                            res[0].name + " sudah limit, apakah ingin tetap ditambahkan?",
-                                            [
-                                                {
-                                                  text: "Ya tambahkan",
-                                                  onPress: (e) => {
-                                                    api.createPassport(data).then(res => {
-                                                        console.log('create pass', res)
-                                                        api.setArchive(res[0].id, 'Inactive').then(res => {
-                                                            setCode('') 
-                                                            ToastAndroid.show('Barcode '+ val +' ditambahkan ke ' + res.archive.name , ToastAndroid.LONG);
-                                                        })
-                                                    })
-                                                  }
-                                                },
-                                                {
-                                                  text: "Batalkan",
-                                                  onPress: () => console.log("Cancel Pressed"),
-                                                  style: "cancel"
-                                                },
-                                                { text: "Masukkan di box baru", onPress: (e) => {
-                                                    let arcData = {
-                                                        name : Number("Box 1".replace( /^\D+/g, '')) + 1,
-                                                        status : 'Active',
-                                                        type : 'wna'
-                                                    }
-                                                    api.createArchive(arcData)
-                                                    .then(res => {
-                                                        // console.log('create arc', res)
-                                                        data["archive"] = res.id 
-                                                        // console.log('data',data)
-                                                        api.createPassport(data).then(res => {
-                                                            console.log('create pass', res)
-                                                            ToastAndroid.show('Barcode '+ val +' ditambahkan ke ' + res.archive.name , ToastAndroid.LONG);
-                                                            setCode('')
-                                                        })
-                                                    })    
-                                                }}
-                                              ]
-                                          );
-                                    }else{
-                                        api.createPassport(data).then(res => {
-                                            setCode('') 
-                                            ToastAndroid.show('Barcode '+ val +' ditambahkan ke ' + res.archive.name , ToastAndroid.LONG);
-                                        })
-                                    }
-                                })
-                            }
-                        })
-                        .catch(err => 
-                            console.log('err',err)   
-                        )
-                    }else{
-                        ToastAndroid.show('Barcode '+ val +' exist! '  , ToastAndroid.SHORT);
-                        setTimeout(() => {
-                            setReadBarcode(true)
-                        }, 2500);
-                    }
-                }).catch(err => 
-                    console.log('err',err)
-                )
+                setData(result)
+                setVisible(true)
+                setLoading(false)
             }else{
-                ToastAndroid.show('Barcode '+ val +' not valid!', ToastAndroid.SHORT);
+                ToastAndroid.show('Barcode '+ val +' not valid!', ToastAndroid.LONG);
                 setTimeout(() => {
                     setReadBarcode(true)
+                    setLoading(false)
                 }, 2500);
             }
         }).catch(err => {
+            Alert.alert(
+                "Warning",
+                "ada kemungkinan server berubah, login ulang ?",
+                [
+                    {
+                    text: "Ya",
+                    onPress: (e) => {
+                        handleLogout();
+                        RNRestart.Restart();
+                    }
+                    },
+                    {
+                    text: "Batalkan",
+                    onPress: () => console.log("Cancel Pressed"),
+                    style: "cancel"
+                    }
+                ]
+            )
             console.log(err)
         })
-        // const result =  WNA.filter(data => {
-        //     return data.no_permohonan == val
-        // })
-        // console.log('res',result)
-        
         // console.log('data',result);  
     }
     return(
         <>
+        <Spinner
+            visible={loading}
+            textContent={'Loading...'}
+            textStyle={{color: 'white'}}
+        />
         {!props.manual ?
-            <RNCamera
-                ref={ref => {
-                camera = ref;
-                }}
-                style={{ 
-                flex: 1,
-                width: '100%',
-                }}
-                onGoogleVisionBarcodesDetected={e=> {readBarcode ? barcodeRecognized(e) : null}}
-                >
-            </RNCamera>
+            <Fragment>
+                <RNCamera
+                        ref={ref => {
+                        camera = ref;
+                        }}
+                        style={{ 
+                        flex: 1,
+                        width: '100%',
+                        }}
+                        onGoogleVisionBarcodesDetected={e=> {readBarcode ? barcodeRecognized(e) : null}}
+                        >
+                </RNCamera>
+                <View style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    zIndex: 1,
+                }}>
+                <View style={{
+                        flex: 1,
+                        backgroundColor: "rgba(0,0,0,0.7)",
+                }}></View>
+                <View style={{
+                        flexDirection: "row",
+                        flex: 1.5,
+                }}>
+                    <View style={{
+                        flex: 1,
+                        backgroundColor: "rgba(0,0,0,0.7)",
+                    }}></View>
+                    <View style={{
+                        borderColor: "red",
+                        borderWidth: 2,
+                        flex: 6,
+                    }}>
+                <Text style={{backgroundColor:'white',padding: 12,color:'black'}}>Scan QR from document</Text>
+                    </View>
+                    <View style={{
+                        flex: 1, 
+                        backgroundColor: "rgba(0,0,0,0.7)",
+                    }}></View>
+                </View>
+                <View style={{
+                        flex: 1,
+                        backgroundColor: "rgba(0,0,0,0.7)",
+                }}></View>
+                </View>
+            </Fragment>
         : 
         <Card>
             <TextInput
@@ -183,6 +147,13 @@ export default ScanWNA = (props,{ navigation }) => {
             />
         </Card>
         }
+        <View>
+        <ModalData visible={visible} onClose={e=> {
+            setVisible(e)
+            setReadBarcode(true)
+        }} data={data} box={box} host={props.host} auth={props.auth.baseURL} />
+
+        </View>
         </>
     )
 }
